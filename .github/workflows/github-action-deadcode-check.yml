@@ -1,4 +1,4 @@
-name: Deadcode Check
+name: test_workflow
 on:
   push:
   pull_request:
@@ -17,6 +17,6 @@ jobs:
         access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
         message: |
           Repository: ${{ github.repository }}
-          Event : ${{ github.event_name }}
-          Type : ${{ github.event.action }}
-
+          Workflow: ${{ github.workflow }}
+          Workflow Run ID: ${{ github.run_id }}
+          Timestamp: ${{ github.run_timestamp }}
