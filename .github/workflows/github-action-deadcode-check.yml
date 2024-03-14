@@ -22,4 +22,4 @@ jobs:
           Repository: ${{ github.repository }}
           Workflow: ${{ github.workflow }}
           Workflow Run ID: ${{ github.run_id }}
-          Timestamp: $NOW
+          Timestamp: ${{ env.NOW }}
