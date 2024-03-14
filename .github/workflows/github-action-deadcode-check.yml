@@ -8,6 +8,8 @@ jobs:
   commit-check:
     runs-on: ubuntu-latest
     steps:
+    - name: Set current date as env variable
+      run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
     - name: Checkout
       uses: actions/checkout@v3
     - name: Test deadcode
@@ -20,4 +22,4 @@ jobs:
           Repository: ${{ github.repository }}
           Workflow: ${{ github.workflow }}
           Workflow Run ID: ${{ github.run_id }}
-          Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          Timestamp: $NOW
