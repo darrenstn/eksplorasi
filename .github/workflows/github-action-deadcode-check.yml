@@ -1,0 +1,15 @@
+name: Deadcode Check
+on:
+  push:
+  pull_request:
+    branches: 'main'
+
+jobs:
+  commit-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Test deadcode
+      uses: ahmet/go-deadcode-checker@v1
+
