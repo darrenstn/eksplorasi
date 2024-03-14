@@ -16,5 +16,5 @@ jobs:
       with:
         access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
         message: |
-          Event : ${{ github.event.action }}.
+          Event : ${{ github.event_name }}.
 
