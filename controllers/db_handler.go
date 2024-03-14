@@ -16,7 +16,7 @@ func connect() *sql.DB {
 	return db
 }
 
-func connectGorm() *gorm.DB {
+func cnectGorm() *gorm.DB {
 	db, err := gorm.Open(mysql.Open("root:@tcp(localhost:3306)/db_uts_pbp"), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)
