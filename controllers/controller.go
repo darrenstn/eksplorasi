@@ -43,7 +43,7 @@ func GetAllRooms(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
-func sendModifiedResponse(w http.ResponseWriter, stat int, msg string) {
+func sendModifiedResponses(w http.ResponseWriter, stat int, msg string) {
 	var response m.Response
 	response.Status = stat
 	response.Message = msg
