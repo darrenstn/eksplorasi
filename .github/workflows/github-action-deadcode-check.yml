@@ -16,7 +16,8 @@ jobs:
       with:
         access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
         message: |
+          Notification
           Repository: ${{ github.repository }}
           Workflow: ${{ github.workflow }}
           Workflow Run ID: ${{ github.run_id }}
-          Timestamp: ${{ github.run_timestamp }}
+          Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
