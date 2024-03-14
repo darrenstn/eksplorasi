@@ -12,4 +12,9 @@ jobs:
       uses: actions/checkout@v3
     - name: Test deadcode
       uses: ahmet/go-deadcode-checker@v1
+    - uses: snow-actions/line-notify@v1.1.0
+      with:
+        access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
+        message: |
+          Event : ${{ github.event.action }}.
 
